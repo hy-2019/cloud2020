@@ -1,0 +1,19 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name:  cloud-order-service
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+#设置fegin客户端超时时间:
+#ribbon:
+  #ReadTimeout: 50000
+  #ConnectTimeout: 50000
+feign:
+  hystrix:
+    enabled: true
